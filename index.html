@@ -21,7 +21,8 @@
 <link rel="preload" href="fonts/bigshoulders-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/bigshoulders-700-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/schibsted-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="img/skydas-750.webp" imagesrcset="img/skydas-480.webp 480w, img/skydas-750.webp 750w" imagesizes="(min-width: 900px) 40vw, 92vw">
+<link rel="preload" as="image" media="(max-width: 899px)" imagesrcset="img/skydas-m-480.webp 480w, img/skydas-m-720.webp 720w" imagesizes="92vw">
+<link rel="preload" as="image" media="(min-width: 900px)" imagesrcset="img/skydas-480.webp 480w, img/skydas-750.webp 750w" imagesizes="40vw">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -66,7 +67,10 @@
   </div>
   <figure class="hero-img">
     <div class="frame">
-      <img src="img/skydas-750.webp" srcset="img/skydas-480.webp 480w, img/skydas-750.webp 750w" sizes="(min-width: 900px) 40vw, 92vw" width="720" height="960" alt="Surinktas elektros skydas: automatiniai jungikliai ir nuotėkio relės ant DIN bėgelių" fetchpriority="high" decoding="async">
+      <picture>
+        <source media="(max-width: 899px)" srcset="img/skydas-m-480.webp 480w, img/skydas-m-720.webp 720w" sizes="92vw" width="720" height="540">
+        <img src="img/skydas-750.webp" srcset="img/skydas-480.webp 480w, img/skydas-750.webp 750w" sizes="40vw" width="720" height="960" alt="Surinktas elektros skydas: automatiniai jungikliai ir nuotėkio relės ant DIN bėgelių" fetchpriority="high" decoding="async">
+      </picture>
     </div>
     <figcaption>Elektros skydo surinkimas. Nuotrauka iš objekto.</figcaption>
   </figure>
